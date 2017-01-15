@@ -2,37 +2,79 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>aziz</title>
+	<title>Billing Info</title>
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 	<div class="wrapper">
-		<header>
-			<h1>Billing Info</h1>
-			<h2>Choose a payment option below and fill out the appropriate information</h2>
+		<header class="header">
+			<h1 class="header__topic">Billing Info</h1>
+			<h2 class="header__description">Choose a payment option below and fill out the appropriate information</h2>
 		</header>
-		<ul class="tab">
-			<li class="creditCard">Credit Card</li>
-			<li class="giftCard">Gift Card</li>
-			<li class="payPal">PayPal</li>
+		<ul class="payment-method">
+			<li class="payment-method__item creditCard _active">Credit Card</li>
+			<li class="payment-method__item giftCard">Gift Card</li>
+			<li class="payment-method__item payPal">PayPal</li>
 		</ul>
-		<div class="info">
-			<div class="adress">
-				<h2>Billing Adress</h2>
-				<label for="name">Full name:</label>
-				<input id="name" type="text">
-				<label for="adress1">Adress 1:</label>
-				<input id="adress1" type="text">
-				<label for="adress2">Adress 2:</label>
-				<input id="adress2" type="text">
+		<form class="info-creditCard">
+			<div class="info-creditCard__adress">
+				<h2 class="title">Billing Adress</h2>
+				<label for="name">Full name</label>
+				<input id="name" type="text" required>
+				<label for="adress1">Adress 1</label>
+				<input id="adress1" type="text" required>
+				<label for="adress2">Adress 2</label>
+				<input id="adress2" type="text" required>
 			</div>
-			<div class="billInfo">
-				<h2>Credit Card Info</h2>
-				<input type="text">
-				<input type="text">
-				<input type="text">
+			<div class="info-creditCard__cardInfo">
+				<h2 class="title">Credit Card Info</h2>
+				<label for="name-card">Name on card</label>
+				<input id="name-card" type="text" required>
+				<label for="number-card">Card Number</label>
+				<input data="creditCard" id="number-card" type="tel" maxlength="16" placeholder="0000-0000-0000-0000" required>
+				<div class="group__card-info">
+					<div class="group__card-info__item" data="cvv">
+						<label for="cvv">cvv number</label>
+						<input id="cvv" type="text" class="group__card-info__input" maxlength="3" placeholder="cvv" required>
+						<div class="tooltip">?</div>
+					</div>
+					<div class="group__card-info__item">
+						<label for="month">exp.month</label>
+						<select class="group__card-info__item_variables" name="month">
+							<option value="">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+							<option value="">5</option>
+							<option value="">6</option>
+							<option value="">7</option>
+							<option value="">8</option>
+							<option value="">9</option>
+							<option value="">10</option>
+							<option value="">11</option>
+							<option value="">12</option>
+						</select>
+					</div>
+					<div class="group__card-info__item year">
+						<label for="year">exp.year</label>
+						<select class="group__card-info__item_variables" name="year">
+							<option value="">2012</option>
+							<option value="">2013</option>
+							<option value="">2014</option>
+							<option value="">2015</option>
+							<option value="">2016</option>
+							<option value="">2017</option>
+							<option value="">2018</option>
+							<option value="">2019</option>
+							<option value="">2020</option>
+							<option value="">2021</option>
+							<option value="">2022</option>
+						</select>
+					</div>
+					<input class="form-submit" type="submit" value="Оплатить">
+				</div>
 			</div>
-		</div>
+		</form>
 	</div>
 </body>
 </html>

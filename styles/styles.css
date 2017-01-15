@@ -1,20 +1,7 @@
+
 h1,h2 {
 	margin: 0;
 	padding: 0;
-}
-
-header h1,
-header h2 {
-	text-align: center;
-}
-
-header h1 {
-	color: #0d1f2f;
-}
-
-header h2 {
-	color: #a9b0b5;
-	font-size: 14px;
 }
 
 .wrapper {
@@ -22,26 +9,38 @@ header h2 {
 	flex-direction: column;
 	align-items: center;
 	padding: 0;
-	margin: 0;
+	margin: 50px 0 0 0;
+	font-family: Helvetica, sans-serif;
 }
 
-.tab,
-.info {
+.header {
+	margin: 0 0 50px 0;
+}
+
+.header__topic,
+.header__description {
+	text-align: center;
+}
+
+.header__topic {
+	color: #0d1f2f;
+	margin: 0 0 20px 0;
+}
+
+.header__description {
+	color: #a9b0b5;
+	font-size: 14px;
+}
+
+.payment-method {
 	display: flex;
+	margin: 0 0 60px 0;
+	padding: 0;
 }
 
-.adress, 
-.billInfo {
-	display: flex;
-	flex-direction: column;
-	width: 260px;
-}
-
-.adress {
-	margin: 0 60px 0 0;
-}
-
-.tab li {
+.payment-method__item {
+	cursor: pointer;
+	font-size: 10px;
 	list-style: none;
 	width: 95px;
 	height: 75px;
@@ -53,60 +52,170 @@ header h2 {
 	background-repeat: no-repeat;
 	border-radius: 3px;
 	text-align: center;
+	padding: 55px 0 0 0;
 }
 
-.info h2 {
-	margin: 0 0 25px 0;
-}
-
-.info h2:before {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	border: solid 2px black;
-	margin: 0 10px 0 0;
-}
-
-.adress h2:before {
-	content: "1";
-}
-
-.billInfo h2:before {
-	content: "2";
-}
-
-.tab li.creditCard {
-	background-image: url(../img/money.svg);
-
-}
-
-.tab li.giftCard {
-	background-image: url(../img/gift-card.svg);
-}
-
-
-.tab li.payPal {
-	background-image: url(../img/paypal.svg);
-}
-
-.tab li:last-child {
+.payment-method__item:last-child {
 	margin: 0;
 }
 
-.tab li:hover {
+.payment-method__item:hover {
 	border: 2px solid #0092c8;
 	background-color: #fff;
 }
 
-.tab {
-	margin: 0 0 60px 0;
+.payment-method__item._active {
+	border: 2px solid #0092c8;
+	background-color: #fff;
+}
+
+.payment-method__item.creditCard {
+	background-image: url(../img/money.svg);
+
+}
+
+.payment-method__item.giftCard {
+	background-image: url(../img/gift-card.svg);
+}
+
+
+.payment-method__item.payPal {
+	background-image: url(../img/paypal.svg);
+}
+
+.info-creditCard {
+	display: flex;
+}
+
+.info-creditCard__adress, 
+.info-creditCard__cardInfo {
+	display: flex;
+	flex-direction: column;
+	width: 260px;
+}
+.info-creditCard input[data="creditCard"] {
+	background-image: url(../img/credit-card-grey.svg);
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+}
+
+.info-creditCard__adress {
+	margin: 0 60px 0 0;
+}
+
+.info-creditCard .title {
+	margin: 0 0 30px 0;
+	font-size: 18px;
+}
+
+.info-creditCard label {
+	color: #bcc1c5;
+	font-size: 14px;
+}
+
+.info-creditCard input {
 	padding: 0;
-}
-
-header {
-	margin: 0 0 50px 0;
-}
-
-input {
+	font-size: 16px;
+	height: 30px;
+	border: 2px solid #f2f2f4;
+	box-sizing: border-box;
+	border-radius: 3px;
 	margin: 0 0 25px 0;
+}
+.info-creditCard .title:before {
+	text-align: center;
+	color: #374552;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: solid 2px #374552;
+	margin: 0 10px 0 0;
+	font-size: 16px;
+}
+
+.info-creditCard__adress .title:before {
+	content: "1";
+}
+
+.info-creditCard__cardInfo .title:before {
+	content: "2";
+}
+
+.group__card-info__input {
+	display: block;
+	width: 75px;
+
+}
+
+.group__card-info__item {
+	display: inline-block;
+	margin: 0 13px 0 0;
+} 
+
+.group__card-info__item.year {
+	margin: 0;
+}
+
+.group__card-info__item[data="cvv"] {
+	position: relative;
+}
+.tooltip {
+	position: absolute;
+	right: 7px;
+	bottom: 32px;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #aeb4b9;
+	border-radius: 50%;
+	text-align: center;
+	color: #aeb4b9;
+	font-size: 12px;
+
+}
+.tooltip::after {
+	background: #f3f4f7;
+	background-image: url(../img/credit-card-with-cvv-code.svg);
+	background-size: 50px;
+	background-repeat: no-repeat;
+	background-position: 50% 80%;
+	border-radius: 8px;
+	box-shadow: 1px 1px 10px rgba(0, 146, 200, 0.8);
+	content: "Введите код на обратной стороне карты";
+	padding: 3px 7px;
+	position: absolute;
+	bottom: 30px;
+	display: none;	
+	transition: all 0.4s ease-in-out; 
+	width: 160px;
+	height: 80px;
+	color: black;
+}
+		
+.tooltip:hover::after {
+	display: block;
+}
+
+.group__card-info__item_variables {
+	display: block;
+	width: 70px;
+	height: 30px;
+	box-sizing: border-box;
+	font-size: 16px;
+	border: 2px solid #f2f2f4;
+}
+
+.form-submit {
+	float: right;
+	width: 100px;
+	background: #f3f4f7;
+	border: 10px solid #000;
+	border-radius: 2px;
+}
+
+.form-submit:hover {
+	background: #fff;
+	border-color: #009ccd;
+	cursor: pointer;
 }

@@ -12,11 +12,11 @@
 			<h2 class="header__description">Choose a payment option below and fill out the appropriate information</h2>
 		</header>
 		<ul class="payment-method">
-			<li class="payment-method__item creditCard _active">Credit Card</li>
-			<li class="payment-method__item giftCard">Gift Card</li>
-			<li class="payment-method__item payPal">PayPal</li>
+			<li class="payment-method__item creditCard _active" data="0">Credit Card</li>
+			<li class="payment-method__item giftCard" data="1">Gift Card</li>
+			<li class="payment-method__item payPal" data="2">PayPal</li>
 		</ul>
-		<form class="info-creditCard">
+		<form class="info-creditCard _active">
 			<div class="info-creditCard__adress">
 				<h2 class="title">Billing Adress</h2>
 				<label for="name">Full name</label>
@@ -75,6 +75,17 @@
 				</div>
 			</div>
 		</form>
+		<form class="info-giftCard">
+			<div class="info-giftCard__item">
+				This is information about Gift Card
+			</div>
+		</form>
+		<form class="info-payPal">
+			<div class="info-payPal__item">
+				This is information about payPal
+			</div>
+		</form>
 	</div>
+	<script src="scripts/scripts.js"></script>
 </body>
 </html>

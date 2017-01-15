@@ -219,3 +219,36 @@ h1,h2 {
 	border-color: #009ccd;
 	cursor: pointer;
 }
+
+.info-creditCard,
+.info-giftCard,
+.info-payPal {
+	display: none;
+}
+
+.info-creditCard._active,
+.info-giftCard._active,
+.info-payPal._active {
+	display: flex;
+}
+
+.info-giftCard__item,
+.info-payPal__item {
+	width: 400px;
+	height: 200px;
+	border: 2px solid #009ccd;
+	text-align: center;
+	border-radius: 8px;
+	padding: 30px;
+	background-repeat: no-repeat;
+	background-size: 80px;
+	background-position: center;
+}
+
+.info-giftCard__item {
+	background-image: url(../img/gift-card.svg);
+}
+
+.info-payPal__item {
+	background-image: url(../img/paypal.svg);
+}

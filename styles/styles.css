@@ -1,0 +1,73 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.tab,
+.info {
+	display: flex;
+}
+
+.adress, 
+.billInfo {
+	display: flex;
+	flex-direction: column;
+	width: 260px;
+}
+
+.adress {
+	margin: 0 60px 0 0;
+}
+
+.tab li {
+	list-style: none;
+	width: 95px;
+	height: 75px;
+	background-color: #f3f4f7; 
+	background-size: 45px;
+	margin: 0 30px 0 0;
+	box-sizing: border-box;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+
+.tab li.creditCard {
+	background-image: url(../img/money.svg);
+
+}
+
+
+.tab li.giftCard {
+	background-image: url(../img/gift-card.svg);
+}
+
+
+.tab li.payPal {
+	background-image: url(../img/paypal.svg);
+}
+
+.tab li:last-child {
+	margin: 0;
+}
+
+.tab li:hover {
+	border: 2px solid #0092c8;
+	background-color: #fff;
+}
+
+.tab {
+	margin: 0 0 60px 0;
+	padding: 0;
+}
+
+header {
+	margin: 0 0 50px 0;
+}
+
+input {
+	margin: 0 0 25px 0;
+}

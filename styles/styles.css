@@ -20,6 +20,7 @@ h1,h2 {
 	align-items: center;
 	padding: 45px 0 0 0;
 	font-family: Helvetica, sans-serif;
+	box-shadow: 2px 2px 15px rgba(173, 178, 183, 0.8);
 }
 
 .header {

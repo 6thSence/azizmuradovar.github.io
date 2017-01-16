@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Billing Info</title>
 	<link rel="stylesheet" href="styles/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.8/jquery.mask.min.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -31,11 +33,11 @@
 				<label for="name-card">Name on card</label>
 				<input id="name-card" type="text" required>
 				<label for="number-card">Card Number</label>
-				<input data="creditCard" id="number-card" type="tel" maxlength="16" placeholder="0000-0000-0000-0000" required>
+				<input data="creditCard" id="number-card" placeholder="0000-0000-0000-0000" required>
 				<div class="group__card-info">
 					<div class="group__card-info__item" data="cvv">
 						<label for="cvv">cvv number</label>
-						<input id="cvv" type="text" class="group__card-info__input" maxlength="3" placeholder="cvv" required>
+						<input id="cvv" class="group__card-info__input" placeholder="cvv" required>
 						<div class="tooltip">?</div>
 					</div>
 					<div class="group__card-info__item">
